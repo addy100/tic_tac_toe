@@ -3,34 +3,30 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Tic Tac Toe</title>
         <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="script.js" defer></script>
     </head>
 
-    <body class="ttt">
-            <div class="messagesec" id="messagesec">
+    <body>
 
-            </div>
-            
-            <div class="row1">
-                <div class="col1"></div>
-                <div class="col2"></div>
-                <div class="col3"></div>
-            </div>
+        <div class="board" id="board">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
 
-            <div class="row2">
-                <div class="col1"></div>
-                <div class="col2"></div>
-                <div class="col3"></div>
-            </div>
-
-            <div class="row3">
-                <div class="col1"></div>
-                <div class="col2"></div>
-                <div class="col3"></div>
-            </div>
-
-
+        <div class="winning-message">
+            <div data-winning message-text></div>
+            <button id="restart-button">Restart</button>
+        </div>
     </body>
 </html>
