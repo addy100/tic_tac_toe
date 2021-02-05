@@ -45,3 +45,8 @@ body {
 .cell:nth-child(3n + 3) {
     border-right: none;
 }
+
+.cell:nth-child(3n+1) {
+    border-left: none;
+}
+
