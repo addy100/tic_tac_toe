@@ -8,7 +8,7 @@ body {
 
 :root {
     --cell-size: 100px;
-    --mark-size: cal(var(--cell-size)*.9);
+    --mark-size: calc(var(--cell-size) * .9);
 }
 
 .board {
@@ -27,6 +27,7 @@ body {
 
     width: 70px;
     height: 70px;
+    display: flex;
     border: 1.5px solid black;
 }
 
@@ -48,5 +49,13 @@ body {
 
 .cell:nth-child(3n+1) {
     border-left: none;
+}
+
+.cell.x::before,
+.cell.x::after {
+    background-color: red;
+    content: '';
+    width: calc(var(--mark-size) * .25);
+    background-color: black;
 }
 
