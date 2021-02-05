@@ -25,10 +25,14 @@ body {
 
 .cell {
 
-    width: 70px;
-    height: 70px;
+    width: var(--cell-size);
+    height: var(--cell-size);
     display: flex;
     border: 1.5px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .cell:first-child,
@@ -55,7 +59,37 @@ body {
 .cell.x::after {
     background-color: red;
     content: '';
-    width: calc(var(--mark-size) * .25);
+    width: calc(var(--mark-size) * .079);
     background-color: black;
 }
+
+.cell.x::before {
+    transform: rotate(45deg);
+}
+
+.cell.x::after {
+    transform: rotate(-45deg);
+}
+
+.cell.circle::before,
+.cell.circle::after {
+    content: '';
+    background-color: black;
+    position: absolute;
+    border-radius: 50%;
+
+}
+    
+.cell.circle::before {
+    width: var(--mark-size);
+    height: var(--mark-size);
+    background-color: black;
+}
+
+.cell.circle::after {
+    width: var(--mark-size) * .4;
+    height: var(--mark-size) * .4;
+    background-color: white;
+}
+
 
